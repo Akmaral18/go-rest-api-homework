@@ -44,7 +44,7 @@ var tasks = map[string]Task{
 // Ниже напишите обработчики для каждого эндпоинта
 // ...
 
-func getTasks(w http.ResponseWriter, r *http.Request) {
+func getTasks(w http.ResponseWriter, _ *http.Request) {
 	resp, err := json.Marshal(tasks)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
